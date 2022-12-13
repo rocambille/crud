@@ -1,5 +1,15 @@
+const models = require("./models");
+
 const browse = (req, res) => {
-  res.send("hello world from userControllers.browse");
+  models.user
+    .findAll()
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
 
 module.exports = {
