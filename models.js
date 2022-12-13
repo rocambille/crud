@@ -23,10 +23,19 @@ const create = (user) => {
   ]);
 };
 
+const update = (user) => {
+  return database.query("update user set email=?, password=? where id=?", [
+    user.email,
+    user.password,
+    user.id,
+  ]);
+};
+
 module.exports = {
   user: {
     findAll,
     find,
     create,
+    update,
   },
 };

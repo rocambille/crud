@@ -23,3 +23,25 @@ Content-Type: application/json
     "email": "me2@mail.com",
     "password": "123456"
 }
+
+###
+
+# PUT an existing user
+PUT http://localhost:5000/api/users/1
+Content-Type: application/json
+
+{
+    "email": "me3@mail.com",
+    "password": "654321"
+}
+
+###
+
+# PUT an non existing user
+PUT http://localhost:5000/api/users/0
+Content-Type: application/json
+
+{
+    "email": "me3@mail.com",
+    "password": "654321"
+}
