@@ -16,9 +16,17 @@ const find = (id) => {
   return database.query("select * from user where id=?", [id]);
 };
 
+const create = (user) => {
+  return database.query("insert into user (email, password) values (?, ?)", [
+    user.email,
+    user.password,
+  ]);
+};
+
 module.exports = {
   user: {
     findAll,
     find,
+    create,
   },
 };

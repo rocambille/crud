@@ -12,3 +12,14 @@ GET http://localhost:5000/api/users/1
 
 # GET an non existing user
 GET http://localhost:5000/api/users/0
+
+###
+
+# POST a new user
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "email": "me2@mail.com",
+    "password": "123456"
+}
