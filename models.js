@@ -31,11 +31,16 @@ const update = (user) => {
   ]);
 };
 
+const destroy = (id) => {
+  return database.query("delete from user where id=?", [id]);
+};
+
 module.exports = {
   user: {
     findAll,
     find,
     create,
     update,
+    destroy,
   },
 };

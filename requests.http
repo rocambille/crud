@@ -45,3 +45,8 @@ Content-Type: application/json
     "email": "me3@mail.com",
     "password": "654321"
 }
+
+###
+
+# PUT an existing user
+DELETE http://localhost:5000/api/users/1
