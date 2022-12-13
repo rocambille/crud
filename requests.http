@@ -1,0 +1,14 @@
+# requests to be tested with REST Client
+
+# GET all users
+GET http://localhost:5000/api/users
+
+###
+
+# GET an existing user
+GET http://localhost:5000/api/users/1
+
+###
+
+# GET an non existing user
+GET http://localhost:5000/api/users/0

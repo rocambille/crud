@@ -12,8 +12,13 @@ const findAll = () => {
   return database.query("select * from user");
 };
 
+const find = (id) => {
+  return database.query("select * from user where id=?", [id]);
+};
+
 module.exports = {
   user: {
     findAll,
+    find,
   },
 };
